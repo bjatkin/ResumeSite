@@ -1,0 +1,59 @@
+@keyframes background-grad-ani-click {
+    0% {
+        background-position: 0px -30px;
+    }
+    20% {
+        background-position: 0px -130px;
+    }
+    100% {
+        background-position: 0px -50px;
+    }
+}
+
+@keyframes background-grad-ani-hov {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -50px;
+    }
+}
+
+@keyframes background-grad-ani-reset {
+    0% {
+        background-position: 0px -50px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@keyframes corner-background-grad-ani-click {
+    0% {
+        background-position: 0px -30px;
+    }
+    20% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px -30px;
+    }
+}
+
+@keyframes corner-background-grad-ani-hov {
+    0% {
+        background-position: 0px -80px;
+    }
+    100% {
+        background-position: 0px -30px;
+    }
+}
+
+@keyframes corner-background-grad-ani-reset {
+    0% {
+        background-position: 0px -30px;
+    }
+    100% {
+        background-position: 0px -80px;
+    }
+}

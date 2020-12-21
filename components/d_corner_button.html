@@ -1,0 +1,62 @@
+<style>
+    button {
+        height: 150px;
+        width: 300px;
+        font-family: 'Roboto', sans-serif;
+        transform: rotate("@angle@");
+        background: transparent;
+        color: white;
+        border: 2px solid transparent;
+        border-top: 2px solid white;
+
+        background-position: 0px -80px;
+        background-size: 300px 400px;
+        background-repeat: no-repeat;
+
+        background-image: linear-gradient(180deg, #0a0707 5%, #0a070700);
+
+        animation: corner-background-grad-ani-reset .5s;
+    }
+
+    button:hover {
+        background-image: linear-gradient(180deg, #0a0707 5%, #0a070700);
+
+        background-position: 0px -30px;
+        background-size: 300px 400px;
+        background-repeat: no-repeat;
+
+        animation: corner-background-grad-ani-hov .5s;
+    }
+
+    button:focus {
+        outline: transparent;
+
+        background-position: 0px -30px;
+        background-size: 300px 400px;
+        background-repeat: no-repeat;
+
+        animation: corner-background-grad-ani-click 1s;
+    }
+
+    button:active {
+        border: 2px solid #aaa;
+    }
+
+    p {
+        margin-top: -64;
+        font-size: 1.4em;
+    }
+</style>
+<button id="{id}" onclick="{onclick}"><p>{label}</p></button>
+
+<script>
+    function toHome() {
+        let pages = document.getElementsByClassName("content-page")
+        for(i = 0; i < pages.length; i++) {
+            pages[i].style.display = "none";
+        }
+
+        document.getElementById("home-buttons-page").style.display = "flex";
+        document.getElementById("current-page").innerHTML = "WELCOME";
+    }
+</script>

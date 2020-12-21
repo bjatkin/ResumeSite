@@ -1,0 +1,105 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+.background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+p, a, h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+h1, h2 {
+    margin-block-start: 0.35em;
+    margin-block-end: 0px;
+}
+
+.header {
+    padding: 1px 10px 10px;
+    background-image: linear-gradient(90deg, #0a0707, #0a070700 75%)
+}
+
+.header>hr {
+    width: 75%;
+    float: left;
+}
+
+.row {
+    margin-top: -106px;
+}
+
+.row:nth-child(even) {
+    margin-left: 107px;
+}
+
+.row:first-of-type {
+    margin-top: 0px;
+}
+
+.content-page {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    overflow: hidden;
+}
+
+#contact-info {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#contact-info {
+    padding: 1px 10px 10px;
+    background-image: linear-gradient(90deg, #0a0707, #0a070700);
+    min-width: 200px;
+    width: 25%;
+}
+
+#clip-home-button {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    width: 215px;
+    height: 215px;
+}
+
+#home-button {
+    position: absolute;
+    bottom: -23px;
+    right: -98px;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+  }
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    height: 2px;
+}
+
+*::-webkit-scrollbar-track {
+background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: white;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #glBackground {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+            }
+
+            body, html {
+                height:  100%;
+                margin: 0px;
+                overflow: hidden;
+            }
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                margin-left: 15px;
+                margin-bottom: -5px;
+                margin-top: 8px;
+                color: white;
+                font-size: 3em;
+            }
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                margin-left: 5px;
+                margin-bottom: 0px;
+                margin-top: -6px;
+                color: white;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                margin: 7px;
+            }
+
+            .contact_section {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 25%;
+                min-width: 300px;
+            }
+
+            hr {
+                width: 75%;
+                float: left;
+                margin-left: 5px;
+            }
+
+            .grad {
+                background-image: linear-gradient(90deg, #2b0c0a, #2b0c0a00, #2b0c0a00)
+            }
+
+            .v_grad {
+                background-image: linear-gradient(180deg, #2b0c0a, #2b0c0a00, #2b0c0a00)
+            }
+
+            .header_bg {
+                margin-top: -8px;
+                padding-top: 11px;
+                padding-bottom: 9px;
+            }
+
+            .home_button {
+                position: absolute;
+                bottom: -8px;
+                right: -66px;
+                transform: rotate(-45deg);
+                height: 100px;
+                width: 215px;
+                text-align: center;
+            }
+
+            .home_button>hr {
+                width: 95%;
+                margin-top: 0px;
+                float: unset;
+            }
+
+            .center_buttons {
+                width: 432px;
+                height: 432px;
+            }
+
+            .center_buttons_parent {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                /* animation: swipe-off-left 5s; */
+            }
+
+            .center_work_history_parent {
+                position: absolute;
+                top: 0px;
+                left: -100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                /* animation: swipe-on-right 5s; */
+            }
+
+            button {
+                width: 150px;
+                height: 150px;
+                font-family: 'Roboto', sans-serif;
+                transform: rotate(45deg);
+                background: transparent;
+                color: white;
+                border: 2px solid white;
+                margin: 32px;
+                background-image: linear-gradient(0deg, #2b0c0a, #2b0c0a00, #2b0c0a00)
+            }
+
+            button>p {
+                margin-top: 110px;
+                font-size: 1.4em;
+            }
+
+            .row {
+                margin-top: -106px;
+            }
+
+            .row:nth-child(even) {
+                margin-left: 109px;
+            }
+
+            @keyframes swipe-off-left {
+                0% {
+                    left: 0px;
+                }
+                100% {
+                    left: -100%;
+                }
+            }
+
+            @keyframes swipe-on-right {
+                0% {
+                    left: 100%;
+                }
+                100% {
+                    left: 0px;
+                }
+            }
+
+        </style>
+
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+        <link href="Roboto/Roboto-Black.ttf" rel="stylesheet">
+    </head>
+    <body>
+        <canvas id="glBackground" width="1920" height="1080"></canvas>
+        <div class="grad header_bg">
+            <h1>WELCOME</h1>
+            <hr>
+        </div> 
+
+        <div class="center_buttons_parent">
+            <div class="center_buttons">
+                <div class="row">
+                    <button><p>EDUCATION</p></button>
+                    <button><p>WORK</p></button>
+                </div>
+                <div class="row">
+                    <button><p>RESUME</p></button>
+                </div>
+                <div class="row">
+                    <button><p>PROJECTS</p></button>
+                    <button><p>SERVICE</p></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="center_work_history_parent">
+            <h1>TEST</h1>
+        </div>
+
+        <div class="grad contact_section">
+            <hr style="margin-top: 0px;"><br>
+            <h2>CONTACT ME</h2>
+            <hr><br>
+            <p>BRANDON ATKINSON</p>
+            <p>BJ.Atkinson@gmail.com</p>
+            <p>(435) 705 - 0256 (text only)</p>
+        </div>
+
+        <div class="v_grad home_button">
+            <hr>
+            <h2>HOME</h2>
+        </div>
+        <script src="shader.js"></script>
+    </body>
+</html>

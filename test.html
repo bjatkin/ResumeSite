@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link remote href="Roboto/Roboto-Regular.ttf" rel="stylesheet">
+        <link remote href="Roboto/Roboto-Bold.ttf" rel="stylesheet">
+        <link remote href="anim.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <canvas class="background" id="glBackground" width="1920" height="1080"></canvas>
+        <div class="header">
+            <h1 id="current-page">WELCOME</h1>
+            <hr>
+        </div> 
+        
+        <component tag="home-buttons" src="pages/home.html"></component>
+        <component tag="about" src="pages/about.html"></component>
+        <component tag="education" src="pages/education.html"></component>
+        <component tag="projects" src="pages/projects.html"></component>
+        <component tag="resume" src="pages/resume.html"></component>
+        <component tag="work" src="pages/work.html"></component>
+
+        <home-buttons></home-buttons>
+        <about></about>
+        <education></education>
+        <projects></projects>
+        <resume></resume>
+        <work></work>
+
+        <div id="contact-info">
+            <hr style="margin-top: -1px;">
+            <h2>CONTACT</h2>
+            <hr>
+            <p>BRANDON ATKINSON</p>
+            <div style="display: flex;">
+                <chip label="Javascript"></chip>
+                <chip label="GoLang"></chip>
+                <chip label="Computer Graphics"></chip>
+                <chip label="Microsoft Word"></chip>
+                <chip label="Advanced Excel Users"></chip>
+                <chip label="HTML"></chip>
+            </div>
+            <a href="mailto:bj.atkinson92@gmail.com">BJ.ATKINSON92@GMAIL.COM</a>
+            <p>(435) 705 - 0256 (TEXT ONLY)</p>
+        </div>
+
+        <component tag="d_corner_button" src="components/d_corner_button.html"></component>
+        <div id="clip-home-button">
+            <div id="home-button">
+                <d_corner_button id="home" label="HOME" angle="-45deg" onclick="toHome();"></d_corner_button>
+            </div>
+        </div>
+
+        <script src="shader.js"></script>
+    </body>
+</html>
+
+<!-- TODO: -->
+<!-- [ ] How to fix the focus button issue where the animaiton never re-fires (this might be ok)-->
+<!-- [ ] Try to lighten the shader a little bit so that the button BG dosent have to be so dark -->
+<!-- [ ] The background color is too close to black on the buttons and does not look good -->

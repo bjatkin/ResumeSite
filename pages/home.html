@@ -1,0 +1,34 @@
+<style>
+    #home-buttons {
+        width: 428px;
+        height: 438px;
+    }
+</style>
+
+<component tag="d_button" src="../components/d_button.html"></component>
+
+<div id="home-buttons-page" class="content-page" style="display: flex;">
+    <div id="home-buttons">
+        <div class="row">
+            <d_button id="education" label="EDUCATION" onclick="toPage('education-page', 'EDUCATION')"></d_button>
+            <d_button id="work" label="WORK" onclick="toPage('work-experience-page', 'WORK EXPERIENCE')"></d_button>
+        </div>
+
+        <div class="row">
+            <d_button id="resume" label="RESUME" onclick="toPage('resume-page', 'RESUME DOWNLOAD')"></d_button>
+        </div>
+
+        <div class="row">
+            <d_button id="resume" label="PROJECTS" onclick="toPage('project-page', 'PERSONAL PROJECTS')"></d_button>
+            <d_button id="resume" label="ABOUT" onclick="toPage('about-page', 'ABOUT ME')"></d_button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toPage(pageID, pageName) {
+        document.getElementById("home-buttons-page").style.display = "none";
+        document.getElementById(pageID).style.display = "flex";
+        document.getElementById("current-page").innerHTML = pageName;
+    }
+</script>

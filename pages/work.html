@@ -1,0 +1,87 @@
+<style>
+    div.cont {
+        width: 100%;
+        height: 425;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+        justify-content: left;
+    }
+    div.pad {
+        min-width: 300px;
+    }
+</style>
+
+<component tag="work" src="../components/work_experience.html"></component>
+<div id="work-experience-page" class="content-page">
+    <div class="cont">
+
+        <div class="pad"></div>
+
+            <work company="ApplicantPro" title="Software Developer (team lead)" link="https://www.applicantpro.com/"
+                start="September 2018" end="August 2019">
+                <work_items>
+                <li>Configured and maintained Linux and Apache server infrastructure for key company productsConfigured and maintained Linux and Apache server infrastructure for key company products</li> 
+                <li>Drove growth on many key products using a LAMP stack as well as GoLang with GCP and Node.js with React</li> 
+                <li>Rewrite and refactor large amounts of legacy PHP code to make more scalable, reliable products.</li> 
+                <li>Lead a team of developers providing technical leadership as well as ensuring high quality, secure code in the products we developed.</li> 
+                </work_items>
+            </work>
+
+            <work company="Refer.io" title="Software Developer" link="https://www.refer.io/" 
+                start="June 2017" end="September 2018">
+                <work_items>
+                    <li>Designed, Developed and maintained software to intelligently route and respond to email traffic leveraging GoLang, Twillio, Send Grid, and Google Natural Language Processing</li> 
+                    <li>Created and expanded internal software tools and plan workflows increasing productivity by a factor of 10</li>
+                    <li>Designed and Employed several SQL database schemas to meet company objectives and store critical data</li> 
+                    <li>Implemented test driven development and increased test coverage to over 90% on several key repositories</li>
+                </work_items>
+            </work>
+
+            <work company="Code Changers" title="Teacher/ Curriculum Developer" link="https://codechangers.com/"
+                start="June 2018" end="August 2018">
+                <work_items>
+                    <li>Developed curriculum for building web apps leveraging JavaScript, HTML and the A-Frame Library</li>
+                    <li>Taught children ages 8-14 on topics ranging from music and game design to building websites and VR web apps</li> 
+                    <li>Developed deep learning curriculum leveraging GPT-2 and google colab</li> 
+                </work_items>
+            </work>
+            
+            <work company="Goldman Sachs" title="Operations Intern" link="https://www.goldmansachs.com/"
+                start="January 2017" end="May 2017">
+                <work_items>
+                    <li>Developed scripts to automate processes and improve operational flow using HTML, VBA, and Java Script</li> 
+                    <li>Developed and implemented an access database to store and organize CRM data</li>
+                    <li>Created over 3.5 hours of daily savings for my team by implementing automations and process improvements</li>
+                </work_items>
+            </work>
+
+            <work company="Blue Coat (Acquired by Symantic)" title="Software Development Intern" link="https://securitycloud.symantec.com/cc/#/landing"
+                start="September 2015" end="January 2017">
+                <work_items>
+                    <li>Developed SQL queries to organize large datasets from a Postgres database into customizable reports</li> 
+                    <li>Developed Java, C++ and Java Script code leveraging Ext JS, Apache Servers, Perforce, Linux, and IntlliJ</li> 
+                    <li>Worked with a distributed team using technologies such as WebEx, Slack, and Jabber</li> 
+                    <li>Helped deploy and maintain servers in Blue Coats internal data center</li> 
+                </work_items>
+            </work>
+
+            <work company="Blue Coat (Acquired by Symantic)" title="Data Analyst Intern" link="https://securitycloud.symantec.com/cc/#/landing"
+                start="October 2013" end="September 2015">
+                <work_items>
+                    <li>Interfaced with customers on technical issues regarding the ProxySG and enhanced customer experience.</li> 
+                    <li>Assisted in automating the software deployment and quality assurance processes to reduce lag between software updates using SaltStack and Java</li>
+                </work_items>
+            </work>
+
+        <div class="pad"></div>
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('wheel', e => {
+        let work = document.querySelector("#work-experience-page > div");
+        work.scrollTo(work.scrollLeft + e.deltaY, 0);
+    });
+</script>
