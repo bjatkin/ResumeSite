@@ -20,47 +20,6 @@ function startBG() {
 
     // Perlin function taken from https://www.shadertoy.com/view/4sXSRN
     // Based on the tutorial from https://www.iquilezles.org/www/articles/warp/warp.htm
-    // const fsSource = `
-    //     uniform float u_NoiseTexture;
-
-    //     float noise(vec2 uv){
-    //         return texture(u_NoiseTexture, uv).r;
-    //     }
-
-    //     uniform float u_Time;
-
-    //     float perlin(vec2 uv){
-    //         uv*=.02;
-    //         float t = u_Time/2048.;
-    //         float res = noise(uv     +t*vec2(.5,  .5))*64.
-    //                 + noise(uv*2. +t*vec2(-.7, .2))*32.
-    //                 + noise(uv*4. +t*vec2( 0,   1))*16.
-    //                 + noise(uv*8. +t*vec2(1,    0))*8.
-    //                 + noise(uv*16.+t*vec2(-.5,-.5))*4.
-    //                 + noise(uv*32.+t*vec2(.1,  .1))*2.
-    //                 + noise(uv*64.+t*vec2(.9,  .9));
-            
-    //         return res / 128.;
-    //     }
-
-    //     vec2 marbel(vec2 uv) {
-    //         vec2 a = vec2( perlin(uv), perlin(uv+vec2(.14, 1.5)));
-    //         vec2 b = vec2( perlin(uv + a + vec2(.3, 1.7)), 
-    //                     perlin(uv + a + vec2(4.2, -.66)));
-            
-    //         return vec2(perlin(uv + b + vec2(5.2, -7.3)), b.y);
-    //     }
-
-    //     void main(){
-    //         vec2 f = marbel(gl_FragCoord.xy);
-    //         vec3 col = vec3(1.);
-    //         col = mix(col, vec3(.8, .3, .05), f.x*f.x);
-    //         col = mix(col, vec3(.05, 0., 0.), f.y*1.4);
-
-    //         gl_FragColor = vec4(col, 1.);
-    //     }
-    // `;
-
     // TODO: Should I use medium precision instead?
     const fsSource = `
         precision highp float;
@@ -102,14 +61,6 @@ function startBG() {
             col = mix(col, vec3(.05, 0., 0.), f.y*1.4);
         
             gl_FragColor = vec4(col, 1.);
-
-            //vec2 uv = gl_FragCoord.xy / u_Resolution;
-            //float t = u_Time;
-
-            //vec3 col = 0.5 + 0.5*cos(t+uv.xyx+vec3(0,2,4));
-            //vec3 col = vec3(noise(uv));
-
-            //gl_FragColor = vec4(col, 1.0);
         }
     `;
 

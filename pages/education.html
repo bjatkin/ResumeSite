@@ -1,3 +1,48 @@
+<style>
+    .section {
+        text-align: center;
+        margin: 25px;
+        width: 40%;
+        min-width: 310px;
+    }
+    .container {
+        display: flex;
+        margin: 50px;
+        max-width: 1000px;
+    }
+    .italic {
+        text-decoration: it;
+    }
+    .sub-title {
+        text-decoration: underline;
+    }
+    .sub {
+        margin-top: -1em;
+    }
+</style>
+
+<component tag="byu_icon" src="../components/icons/BYU_icon.min.svg"></component>
+<component tag="u_icon" src="../components/icons/U_icon.min.svg"></component>
+
 <div id="education-page" class="content-page">
-    <h2>Education Page</h2>
+    <div class="container">
+        <div class="section">
+            <byu_icon></byu_icon>
+            <h2>Brigham Young University</h2>
+            <small>2019 - 2021</small>
+            <hr>
+            <p>MS Computer Science</p> <p class="sub"><em>Summa Cum Laude</em></p>
+            <p class="sub-title">Area</p> <p class="sub">Machine Learning and Artificial Intelligence</p>
+            <p class="sub-title">Thesis Title</p> <p class="sub">Deep Neural Network Internal Structure and Initalization Techniques</p>
+        </div>
+        <hr>
+        <div class="section">
+            <u_icon></u_icon>
+            <h2>University of Utah</h2>
+            <small>2013 - 2017</small>
+            <hr>
+            <p>BS Business</p> <p class="sub"><em>Summa Cum Laude</em></p>
+            <p class="sub-title">Area</p> <p class="sub">Operations Management</p>
+        </div>
+    </div>
 </div>
