@@ -1,3 +1,41 @@
+<style>
+    .container {
+        margin: 25px;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .row {
+        /* TODO change this to be the correct width XP */
+        width: calc(214px * 5);
+        height: 214px;
+    }
+    .center {
+        margin-right: -107px;
+    }
+</style>
+
+<component tag="d_button" src="../components/d_button.html"></component>
 <div id="project-page" class="content-page">
-    <h2>Project Page</h2>
+    <div class="container">
+        <div class="center">
+            <div class="row">
+                <d_button label="CheckSUM"></d_button>
+                <d_button label="GoLF"></d_button>
+                <d_button label="BitCoin Miner"></d_button>
+                <d_button label="AI Dungeon Design"></d_button>
+                <d_button label="Atkinson Initalization"></d_button>
+            </div>
+
+            <div class="row">
+                <d_button label="KISSjs"></d_button>
+                <d_button label="VoxelEngine"></d_button>
+                <d_button label="PathTracer"></d_button>
+                <d_button label="Pepto GAN"></d_button>
+            </div>
+        </div>
+    </div>
 </div>
