@@ -67,6 +67,10 @@
         margin-left: 84px;
         margin-top: 24px;
     }
+
+    a {
+        text-decoration: none;
+    }
     
     .content {
         padding: 30px;
@@ -75,7 +79,7 @@
 
 <component tag="link_icon" src="icons/link_icon.min.svg"></component>
 
-<div id="{id}" class="bg" onclick="document.getElementById('{id}').style.display = 'none'; console.log(e)">
+<div id="{id}" class="bg" onclick="document.getElementById('{id}').style.display = 'none';">
     <div class="container" onclick="event.cancelBubble=true;">
         <div class="top-left"></div>
         <div class="top-right"></div>
@@ -84,11 +88,11 @@
             <div class="cancel" onclick="document.getElementById('{id}').style.display = 'none'"><p>CLOSE</p></div>
         </div>
         <div class="content" onclick="event.cancelBubble=true;">
-            <a href="{href}" target="_blank" rel="noopener noreferrer">
-                <h2>{title} 
-                    <link_icon style="margin-left: .5em;"></link_icon>
-                </h2>
-            </a>
+                <a href="{href}" target="_blank" rel="noopener noreferrer">
+                    <h2>{title} 
+                        <link_icon style="margin-left: .5em;"></link_icon>
+                    </h2>
+                </a>
             <hr>
             {content}
         </div>
