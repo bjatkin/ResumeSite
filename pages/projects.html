@@ -2,40 +2,61 @@
     .container {
         margin: 25px;
         width: 100%;
-        overflow-y: hidden;
-        overflow-x: scroll;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    .center {
+        padding-left: 107px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
     .row {
-        /* TODO change this to be the correct width XP */
+        /* you need to change width every time you add a button, it's anoying but otherwise the buttons will colapse*/
         width: calc(214px * 5);
         height: 214px;
-    }
-    .center {
-        margin-right: -107px;
     }
 </style>
 
 <component tag="d_button" src="../components/d_button.html"></component>
+<component tag="popup" src="../components/d_popup.html"></component>
+
 <div id="project-page" class="content-page">
     <div class="container">
         <div class="center">
             <div class="row">
-                <d_button label="CheckSUM"></d_button>
-                <d_button label="GoLF"></d_button>
-                <d_button label="BitCoin Miner"></d_button>
-                <d_button label="AI Dungeon Design"></d_button>
-                <d_button label="Atkinson Initalization"></d_button>
+                <d_button label="CheckSUM" onclick="showPopup('checksum')"></d_button>
+                <d_button label="GoLF" onclick="showPopup('golf')"></d_button>
+                <d_button label="BitCoin Miner" onclick="showPopup('bitcoin')"></d_button>
+                <d_button label="AI Dungeon Design" onclick="showPopup('aidungeon')"></d_button>
+                <d_button label="Atkinson Initalization" onclick="showPopup('atkinsoninit')"></d_button>
             </div>
 
             <div class="row">
-                <d_button label="KISSjs"></d_button>
-                <d_button label="VoxelEngine"></d_button>
-                <d_button label="PathTracer"></d_button>
-                <d_button label="Pepto GAN"></d_button>
+                <d_button label="KISSjs" onclick="showPopup('kissjs')"></d_button>
+                <d_button label="Voxel Modeler" onclick="showPopup('voxel')"></d_button>
+                <d_button label="Path Tracer" onclick="showPopup('pathtracer')"></d_button>
+                <d_button label="Pepto GAN" onclick="showPopup('peptogan')"></d_button>
             </div>
         </div>
+
+        <popup id="checksum" title="CheckSUM" href="https://github.com/bjatkin/checkSUM"><content><p>CheckSUM is...</p></content></popup>
+        <popup id="golf" title="GoLF (GoLang Fantasy engine)" href="https://github.com/bjatkin/golf-engine"></popup>
+        <popup id="bitcoin" title="Java BitCoin Miner" href="https://github.com/bjatkin/JavaBitCoinMinner"></popup>
+        <popup id="aidungeon" title="AI Dungeon Designer" href="https://github.com/bjatkin/dungeon-design"></popup>
+        <popup id="atkinsoninit" title="DNN Atkinson Initalization" href="#"></popup>
+
+        <popup id="kissjs" title="KISSjs" href="https://github.com/bjatkin/KISSjs"></popup>
+        <popup id="voxel" title="Voxel Modeler" href="https://github.com/bjatkin/VoxelEngine"></popup>
+        <popup id="pathtracer" title="Path / Ray Tracer" href="https://github.com/bjatkin/RayTracer"></popup>
+        <popup id="peptogan" title="Pepto GAN" href="#"></popup>
+
     </div>
 </div>
+
+<script>
+    document.addEventListener('wheel', e => {
+        let work = document.querySelector("#project-page > div > div");
+        work.scrollTo(work.scrollLeft + e.deltaY, 0);
+    });
+</script>
