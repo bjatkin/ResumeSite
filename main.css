@@ -12,12 +12,12 @@ html, body {
     z-index: -2;
 }
 
-small, p, a, li, h1, h2 {
+small, p, a, li, h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
     color: #fff;
 }
 
-h1, h2 {
+h1, h2, h3 {
     margin-block-start: 0.35em;
     margin-block-end: 0px;
 }
