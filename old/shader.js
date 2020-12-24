@@ -20,8 +20,9 @@ function startBG() {
 
     // Perlin function taken from https://www.shadertoy.com/view/4sXSRN
     // Based on the tutorial from https://www.iquilezles.org/www/articles/warp/warp.htm
+    // TODO: Should I use medium precision instead?
     const fsSource = `
-        precision lowp float;
+        precision highp float;
 
         uniform vec2 u_Resolution;
         uniform float u_Time;
@@ -101,7 +102,7 @@ function startBG() {
 
     // Bind the noise texture
     gl.activeTexture(gl.TEXTURE0);
-    gl.bindTexture(gl.TEXTURE_2D, loadTexture(gl, 'images/Noise.png'));
+    gl.bindTexture(gl.TEXTURE_2D, loadTexture(gl, 'Noise.png'));
 
     gl.useProgram(shader.program);
 

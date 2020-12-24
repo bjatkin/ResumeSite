@@ -1,209 +1,62 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            #glBackground {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                z-index: -1;
-                width: 100%;
-                height: 100%;
-            }
-
-            body, html {
-                height:  100%;
-                margin: 0px;
-                overflow: hidden;
-            }
-
-            h1 {
-                font-family: 'Roboto', sans-serif;
-                margin-left: 15px;
-                margin-bottom: -5px;
-                margin-top: 8px;
-                color: white;
-                font-size: 3em;
-            }
-
-            h2 {
-                font-family: 'Roboto', sans-serif;
-                margin-left: 5px;
-                margin-bottom: 0px;
-                margin-top: -6px;
-                color: white;
-            }
-
-            p {
-                font-family: 'Roboto', sans-serif;
-                color: white;
-                margin: 7px;
-            }
-
-            .contact_section {
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-                width: 25%;
-                min-width: 300px;
-            }
-
-            hr {
-                width: 75%;
-                float: left;
-                margin-left: 5px;
-            }
-
-            .grad {
-                background-image: linear-gradient(90deg, #2b0c0a, #2b0c0a00, #2b0c0a00)
-            }
-
-            .v_grad {
-                background-image: linear-gradient(180deg, #2b0c0a, #2b0c0a00, #2b0c0a00)
-            }
-
-            .header_bg {
-                margin-top: -8px;
-                padding-top: 11px;
-                padding-bottom: 9px;
-            }
-
-            .home_button {
-                position: absolute;
-                bottom: -8px;
-                right: -66px;
-                transform: rotate(-45deg);
-                height: 100px;
-                width: 215px;
-                text-align: center;
-            }
-
-            .home_button>hr {
-                width: 95%;
-                margin-top: 0px;
-                float: unset;
-            }
-
-            .center_buttons {
-                width: 432px;
-                height: 432px;
-            }
-
-            .center_buttons_parent {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-
-                /* animation: swipe-off-left 5s; */
-            }
-
-            .center_work_history_parent {
-                position: absolute;
-                top: 0px;
-                left: -100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-
-                /* animation: swipe-on-right 5s; */
-            }
-
-            button {
-                width: 150px;
-                height: 150px;
-                font-family: 'Roboto', sans-serif;
-                transform: rotate(45deg);
-                background: transparent;
-                color: white;
-                border: 2px solid white;
-                margin: 32px;
-                background-image: linear-gradient(0deg, #2b0c0a, #2b0c0a00, #2b0c0a00)
-            }
-
-            button>p {
-                margin-top: 110px;
-                font-size: 1.4em;
-            }
-
-            .row {
-                margin-top: -106px;
-            }
-
-            .row:nth-child(even) {
-                margin-left: 109px;
-            }
-
-            @keyframes swipe-off-left {
-                0% {
-                    left: 0px;
-                }
-                100% {
-                    left: -100%;
-                }
-            }
-
-            @keyframes swipe-on-right {
-                0% {
-                    left: 100%;
-                }
-                100% {
-                    left: 0px;
-                }
-            }
-
-        </style>
-
-        <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
-        <link href="Roboto/Roboto-Black.ttf" rel="stylesheet">
+        <link remote href="Roboto/Roboto-Regular.ttf" rel="stylesheet">
+        <link remote href="Roboto/Roboto-Bold.ttf" rel="stylesheet">
+        <link remote href="extraCss/anim.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
     </head>
     <body>
-        <canvas id="glBackground" width="1920" height="1080"></canvas>
-        <div class="grad header_bg">
-            <h1>WELCOME</h1>
+
+        <canvas class="background" id="glBackground" width="1920" height="1080"></canvas>
+        <div class="header">
+            <h1 id="current-page">WELCOME</h1>
             <hr>
         </div> 
+        
+        <component tag="home-buttons" src="pages/home.html"></component>
+        <component tag="about" src="pages/about.html"></component>
+        <component tag="education" src="pages/education.html"></component>
+        <component tag="projects" src="pages/projects.html"></component>
+        <component tag="resume" src="pages/resume.html"></component>
+        <component tag="work" src="pages/work.html"></component>
 
-        <div class="center_buttons_parent">
-            <div class="center_buttons">
-                <div class="row">
-                    <button><p>EDUCATION</p></button>
-                    <button><p>WORK</p></button>
-                </div>
-                <div class="row">
-                    <button><p>RESUME</p></button>
-                </div>
-                <div class="row">
-                    <button><p>PROJECTS</p></button>
-                    <button><p>SERVICE</p></button>
-                </div>
-            </div>
-        </div>
+        <home-buttons></home-buttons>
+        <about></about>
+        <education></education>
+        <projects></projects>
+        <resume></resume>
+        <work></work>
 
-        <div class="center_work_history_parent">
-            <h1>TEST</h1>
-        </div>
-
-        <div class="grad contact_section">
-            <hr style="margin-top: 0px;"><br>
-            <h2>CONTACT ME</h2>
-            <hr><br>
-            <p>BRANDON ATKINSON</p>
-            <p>BJ.Atkinson@gmail.com</p>
+        <div id="contact-info">
+            <hr style="margin-top: -1px;">
+            <h2>CONTACT</h2>
+            <hr>
+            <p>Brandon Atkinson</p>
+            <a href="mailto:bj.atkinson92@gmail.com">BJ.Atkinson92@gmail.com</a>
             <p>(435) 705 - 0256 (text only)</p>
         </div>
 
-        <div class="v_grad home_button">
-            <hr>
-            <h2>HOME</h2>
+        <component tag="d_corner_button" src="components/d_corner_button.html"></component>
+        <div id="clip-home-button">
+            <div id="home-button">
+                <d_corner_button id="home" label="HOME" angle="-45deg" onclick="toHome();"></d_corner_button>
+            </div>
         </div>
+
         <script src="shader.js"></script>
     </body>
 </html>
+
+<!-- TODO: -->
+<!-- [ ] How to fix the focus button issue where the animaiton never re-fires (this might be ok)-->
+<!-- [ ] Try to lighten the shader a little bit so that the button BG dosent have to be so dark -->
+<!-- [ ] The background color is too close to black on the buttons and does not look good -->
+<!-- [ ] Add my github accound and linked in account to my bio -->
+<!-- [ ] Add education links -->
+<!-- [ ] Make the checkSUM readme really pretty -->
+<!-- [ ] Make KISSjs more presentable -->
+<!-- [ ] Add links for Pepto GAN and Atkinson Initalization -->
+<!-- [ ] Make all the icons from all the pages. Custom project icons? -->
+<!-- [ ] Clean up the current grabage workspace -->
+<!-- [ ] Make the KISSjs readme really pretty -->
