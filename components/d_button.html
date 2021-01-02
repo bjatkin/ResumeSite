@@ -50,6 +50,15 @@
         bottom: 8px;
         left: 0px;
     }
+
+    .icon {
+        transform: rotate(-45deg);
+        padding-left: 10px;
+        padding-bottom: 30px;
+    }
 </style>
 
-<button id="{id}" onclick="{onclick}"><span>{label}</span></button>
+<button id="{id}" onclick="{onclick}">
+    <span class="icon">{icon}</span>
+    <span>{label}</span>
+</button>
